@@ -1,0 +1,27 @@
+{
+  "name": "flux-store",
+  "version": "1.0.0",
+  "description": "The missing store for vanilla Flux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jedireza/flux-store"
+  },
+  "keywords": [
+    "flux",
+    "store",
+    "react"
+  ],
+  "author": "Reza Akhavan <jedireza@gmail.com> (http://reza.akhavan.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jedireza/flux-store/issues"
+  },
+  "homepage": "https://github.com/jedireza/flux-store",
+  "dependencies": {
+    "object-assign": "^1.0.0"
+  }
+}
