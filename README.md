@@ -36,15 +36,15 @@ var Store = FluxStore.extend({
         var action = payload.action;
 
         if (ActionTypes.SEND_REQUEST === action.type) {
-            Store.stateStuff.loading = true;
-            Store.emitChange();
+            this.stateStuff.loading = true;
+            this.emitChange();
         }
 
         if (ActionTypes.RECEIVE_RESPONSE === action.type) {
-            Store.stateStuff.loading = false;
-            Store.stateStuff.objectFoo = action.data.objectFoo;
-            Store.stateStuff.arrayOfBaz = action.data.arrayOfBaz;
-            Store.emitChange();
+            this.stateStuff.loading = false;
+            this.stateStuff.objectFoo = action.data.objectFoo;
+            this.stateStuff.arrayOfBaz = action.data.arrayOfBaz;
+            this.emitChange();
         }
     }
 });

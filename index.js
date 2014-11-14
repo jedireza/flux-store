@@ -9,7 +9,8 @@ var FluxStore = ObjectAssign({}, EventEmitter.prototype, {
     dispatchToken: undefined,
     registerDispatcher: function (Dispatcher) {
 
-        this.dispatchToken = Dispatcher.register(this.onDispatcherAction);
+        var callback = this.onDispatcherAction.bind(this);
+        this.dispatchToken = Dispatcher.register(callback);
     },
     emitChange: function () {
 

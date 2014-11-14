@@ -1,6 +1,6 @@
 {
   "name": "flux-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The missing store for vanilla Flux.",
   "main": "index.js",
   "scripts": {
