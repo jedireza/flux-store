@@ -61,14 +61,12 @@ module.exports = Store;
 
 This is the handler for your `Dispatcher`'s action events.
 
-#### `onDispatcherAction(payload)`
-
-This is the handler for your `Dispatcher`'s action events.
-
 #### `registerDispatcher(Dispatcher)`
 
-This connects your `Store` to your `Dispatcher` and populates your `Store`'s
-`dispatchToken` property so Flux stuff (like `waitFor`) continues to work.
+_This is done automatically when you use `extend` to create a store and pass in
+a `dispatcher`._ This connects your `Store` to your `Dispatcher` and populates
+your `Store`'s `dispatchToken` property so Flux stuff (like `waitFor`)
+continues to work.
 
 #### `emitChange()`
 
