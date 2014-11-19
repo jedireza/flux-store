@@ -26,7 +26,14 @@ var FluxStore = ObjectAssign({}, EventEmitter.prototype, {
     },
     extend: function (stuff) {
 
-        return ObjectAssign({}, FluxStore, stuff);
+        var newStore = ObjectAssign({}, FluxStore, stuff);
+
+        if (stuff.dispatcher) {
+            newStore.registerDispatcher(stuff.dispatcher);
+        }
+
+        delete newStore.extend;
+        return newStore;
     }
 });
 

@@ -1,7 +1,7 @@
 {
   "name": "flux-store",
   "version": "1.0.1",
-  "description": "The missing store for vanilla Flux.",
+  "description": "The missing store for Flux.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

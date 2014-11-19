@@ -1,6 +1,6 @@
 # flux-store
 
-The missing store for vanilla Flux.
+The missing store for Flux.
 
 
 ## Install
@@ -22,6 +22,7 @@ var ActionTypes = Constants.ActionTypes;
 
 
 var Store = FluxStore.extend({
+    dispatcher: Dispatcher,
     stateStuff: {
         loading: false,
         objectFoo: {},
@@ -50,14 +51,15 @@ var Store = FluxStore.extend({
 });
 
 
-Store.registerDispatcher(Dispatcher);
-
-
 module.exports = Store;
 ```
 
 
-## A simple interface
+## API
+
+#### `onDispatcherAction(payload)`
+
+This is the handler for your `Dispatcher`'s action events.
 
 #### `onDispatcherAction(payload)`
 
@@ -72,11 +74,10 @@ This connects your `Store` to your `Dispatcher` and populates your `Store`'s
 
 This emits a `change` event so listeners know that state has changed.
 
+### Change listeners
 
-## React change listeners
-
-Two functions are included in your `Store` that you can use with your React
-controller-views.
+Two functions are included in your new `Store`. You'll probably use these in
+your React controller-views.
 
 #### `addChangeListener(callback)`
 
