@@ -14,7 +14,7 @@ $ npm install flux-store
 
 ```js
 var FluxStore = require('flux-store'); // that's us, such meta
-var Dispatcher = require('./Dispatcher');
+var myDispatcher = require('flux-dispatcher');
 var Constants = require('./Constants');
 
 
@@ -22,7 +22,7 @@ var ActionTypes = Constants.ActionTypes;
 
 
 var Store = FluxStore.extend({
-    dispatcher: Dispatcher,
+    dispatcher: myDispatcher,
     stateStuff: {
         loading: false,
         objectFoo: {},
