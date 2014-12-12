@@ -2,6 +2,10 @@
 
 The missing store for Flux.
 
+[![Dependency Status](https://david-dm.org/jedireza/flux-store.svg?theme=shields.io)](https://david-dm.org/jedireza/flux-store)
+[![devDependency Status](https://david-dm.org/jedireza/flux-store/dev-status.svg?theme=shields.io)](https://david-dm.org/jedireza/flux-store#info=devDependencies)
+[![Build Status](https://travis-ci.org/jedireza/flux-store.svg?branch=master)](https://travis-ci.org/jedireza/flux-store)
+
 
 ## Install
 

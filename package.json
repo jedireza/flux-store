@@ -4,7 +4,8 @@
   "description": "The missing store for Flux.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/lab/bin/lab -c -L",
+    "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   "homepage": "https://github.com/jedireza/flux-store",
   "dependencies": {
     "object-assign": "^1.0.0"
+  },
+  "devDependencies": {
+    "code": "^1.2.1",
+    "lab": "^5.1.0"
   }
 }
