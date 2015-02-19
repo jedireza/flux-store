@@ -21,9 +21,7 @@ var FluxStore = require('flux-store'); // that's us, such meta
 var myDispatcher = require('flux-dispatcher');
 var Constants = require('./Constants');
 
-
 var ActionTypes = Constants.ActionTypes;
-
 
 var Store = FluxStore.extend({
     dispatcher: myDispatcher,
@@ -53,7 +51,6 @@ var Store = FluxStore.extend({
         }
     }
 });
-
 
 module.exports = Store;
 ```
