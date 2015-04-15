@@ -23,10 +23,14 @@
   },
   "homepage": "https://github.com/jedireza/flux-store",
   "dependencies": {
+    "node-event-emitter": "0.0.1",
     "object-assign": "^2.0.0"
   },
   "devDependencies": {
     "code": "^1.2.1",
     "lab": "^5.1.0"
+  },
+  "browser": {
+    "events": "node-event-emitter"
   }
 }
