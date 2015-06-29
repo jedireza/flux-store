@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/lab/bin/lab -c -L",
-    "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
+    "update": "david update"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,11 @@
   },
   "homepage": "https://github.com/jedireza/flux-store",
   "dependencies": {
-    "object-assign": "^2.0.0"
+    "object-assign": "^3.0.0"
   },
   "devDependencies": {
     "code": "^1.2.1",
+    "david": "^6.1.6",
     "lab": "^5.1.0"
   }
 }
