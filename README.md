@@ -1,6 +1,6 @@
 # flux-store
 
-The simple store for Flux.
+A simple store for Flux.
 
 [![Build Status](https://travis-ci.org/jedireza/flux-store.svg?branch=master)](https://travis-ci.org/jedireza/flux-store)
 [![Dependency Status](https://david-dm.org/jedireza/flux-store.svg?theme=shields.io)](https://david-dm.org/jedireza/flux-store)
