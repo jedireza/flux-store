@@ -1,6 +1,5 @@
 var Lab = require('lab');
 var Code = require('code');
-var Path = require('path');
 var Store = require('../index');
 
 
@@ -41,7 +40,7 @@ lab.experiment('Store', function () {
             }
         };
 
-        var MyStore = Store.extend({
+        Store.extend({
             dispatcher: MockDispatcher,
             onDispatcherAction: function () { }
         });
