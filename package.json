@@ -4,8 +4,8 @@
   "description": "A simple store for Flux.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -c -L",
-    "test-cover": "./node_modules/lab/bin/lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "test": "lab -c -L",
+    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,9 @@
     "object-assign": "^4.x.x"
   },
   "devDependencies": {
-    "code": "^1.x.x",
-    "lab": "^6.x.x"
+    "code": "^2.x.x",
+    "eslint-config-hapi": "^6.x.x",
+    "eslint-plugin-hapi": "^3.x.x",
+    "lab": "^7.x.x"
   }
 }
