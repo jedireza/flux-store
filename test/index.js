@@ -1,14 +1,16 @@
-var Lab = require('lab');
-var Code = require('code');
-var Store = require('../index');
+'use strict';
+
+const Lab = require('lab');
+const Code = require('code');
+const Store = require('../index');
 
 
-var lab = exports.lab = Lab.script();
+const lab = exports.lab = Lab.script();
 
 
-lab.experiment('Store', function () {
+lab.experiment('Store', () => {
 
-    lab.test('it is an object with an extend method', function (done) {
+    lab.test('it is an object with an extend method', (done) => {
 
         Code.expect(Store).to.be.an.object();
         Code.expect(Store.extend).to.be.a.function();
@@ -17,9 +19,9 @@ lab.experiment('Store', function () {
     });
 
 
-    lab.test('it creates a new store by extending the base store', function (done) {
+    lab.test('it creates a new store by extending the base store', (done) => {
 
-        var MyStore = Store.extend({});
+        const MyStore = Store.extend({});
 
         Code.expect(MyStore).to.be.an.object();
         Code.expect(MyStore.registerDispatcher).to.be.a.function();
@@ -31,10 +33,10 @@ lab.experiment('Store', function () {
     });
 
 
-    lab.test('it registers a dispatcher when passed in extend options', function (done) {
+    lab.test('it registers a dispatcher when passed in extend options', (done) => {
 
-        var MockDispatcher = {
-            register: function () {
+        const MockDispatcher = {
+            register: () => {
 
                 done();
             }
@@ -42,31 +44,31 @@ lab.experiment('Store', function () {
 
         Store.extend({
             dispatcher: MockDispatcher,
-            onDispatcherAction: function () { }
+            onDispatcherAction: () => {}
         });
     });
 
 
-    lab.test('it registers a dispatcher manually', function (done) {
+    lab.test('it registers a dispatcher manually', (done) => {
 
-        var MockDispatcher = {
-            register: function () {
+        const MockDispatcher = {
+            register: () => {
 
                 done();
             }
         };
 
-        var MyStore = Store.extend({
-            onDispatcherAction: function () { }
+        const MyStore = Store.extend({
+            onDispatcherAction: () => {}
         });
 
         MyStore.registerDispatcher(MockDispatcher);
     });
 
 
-    lab.test('it demonstrates add/remove listener and emit change', function (done) {
+    lab.test('it demonstrates add/remove listener and emit change', (done) => {
 
-        var MockDispatcher = {
+        const MockDispatcher = {
             callbacks: [],
             register: function (callback) {
 
@@ -75,7 +77,7 @@ lab.experiment('Store', function () {
             },
             handleAction: function (type, data) {
 
-                this.callbacks.forEach(function (callback) {
+                this.callbacks.forEach((callback) => {
 
                     callback({
                         action: {
@@ -87,7 +89,7 @@ lab.experiment('Store', function () {
             }
         };
 
-        var MyStore = Store.extend({
+        const MyStore = Store.extend({
             dispatcher: MockDispatcher,
             onDispatcherAction: function (payload) {
 
@@ -95,7 +97,7 @@ lab.experiment('Store', function () {
             }
         });
 
-        var changeListener = function () {
+        const changeListener = () => {
 
             MyStore.removeChangeListener(changeListener);
             done();

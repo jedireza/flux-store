@@ -1,0 +1,7 @@
+{
+    "extends": "hapi",
+    "rules": {
+        "no-var": 0,
+        "prefer-arrow-callback": 0
+    }
+}
