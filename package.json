@@ -1,6 +1,6 @@
 {
   "name": "flux-store",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A simple store for Flux.",
   "main": "index.js",
   "scripts": {
